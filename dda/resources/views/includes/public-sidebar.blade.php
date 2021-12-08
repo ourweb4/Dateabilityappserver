@@ -138,13 +138,13 @@
             <span><?= __tr('My Dislikes') ?></span>
         </a>
     </li>
-    <li class="nav-item  <?= makeLinkActive('user.profile_visitors_view') ?>">
+ {{--   <li class="nav-item  <?= makeLinkActive('user.profile_visitors_view') ?>">
         <a class="nav-link" href="<?= route('user.profile_visitors_view') ?>">
             <i class="fa fa-user" aria-hidden="true"></i>
             <span><?= __tr('Visitors') ?></span>
         </a>
     </li>
-    <li class="nav-item  <?= makeLinkActive('user.notification.read.view') ?>">
+ --}}   <li class="nav-item  <?= makeLinkActive('user.notification.read.view') ?>">
         <a class="nav-link" href="<?= route('user.notification.read.view') ?>">
             <i class="fa fa-bell" aria-hidden="true"></i>
             <span><?= __tr('Notifications') ?></span>

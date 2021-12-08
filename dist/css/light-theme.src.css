@@ -115,7 +115,7 @@ html.lw-light-theme .list-group-item.list-group-item-action {
   color: #555555;
 }
 html.lw-light-theme .list-group-item.list-group-item-action.active {
-  background-color: #d2009c;
+  background-color: #2646d1;
   color: white;
 }
 html.lw-light-theme .list-group-item {
@@ -155,18 +155,18 @@ html.lw-light-theme .page-link {
 }
 html.lw-light-theme .sidebar-dark .nav-item.active .nav-link i,
 html.lw-light-theme .sidebar-dark .nav-item.active .nav-link {
-  color: #d2009c;
+  color: #2646d1;
 }
 html.lw-light-theme .text-primary {
-  color: #d2009c !important;
+  color: #2646d1 !important;
 }
 html.lw-light-theme .btn-primary {
-  background-color: #d2009c;
-  border-color: #d2009c;
+  background-color: #2646d1;
+  border-color: #2646d1;
   color: #fff;
 }
 html.lw-light-theme .border-left-primary {
-  border-color: #d2009c !important;
+  border-color: #2646d1 !important;
 }
 html.lw-light-theme .btn.btn-dark {
   color: #000;

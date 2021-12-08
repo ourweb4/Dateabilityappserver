@@ -275,7 +275,7 @@
   margin-left: 28px;
 }
 .lw-messenger .lw-messenger-content .lw-messenger-chat-window .lw-messenger-chat-sender .lw-messenger-chat-item {
-  background-color: #c55eaa;
+  background-color: #2646d1;
   color: white;
   margin-left: 0;
   margin-right: 24px;
@@ -284,7 +284,7 @@
   margin-left: 34px;
 }
 .lw-messenger .lw-messenger-content .lw-messenger-chat-window .lw-messenger-chat-sender .lw-messenger-chat-item .lw-messenger-chat-meta {
-  border-top: 1px solid #ca75b4;
+  border-top: 1px solid #2646d1;
   color: #dcdcdc;
 }
 .lw-messenger .lw-messenger-content .lw-messenger-chat-window .lw-messenger-chat-sender .lw-messenger-chat-item:after {
@@ -295,7 +295,7 @@
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-left-color: #c55daa;
+  border-left-color:#2646d1;
   border-right: 0;
   border-bottom: 0;
   margin-top: -10px;
@@ -306,7 +306,7 @@
   left: 0;
   right: auto;
   border: 30px solid transparent;
-  border-right-color: #c55daa;
+  border-right-color:#2646d1;
   border-left: 0;
   border-bottom: 0;
   margin-top: -15px;

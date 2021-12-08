@@ -773,7 +773,8 @@ class UserEngine extends BaseEngine
                 //store profile visitors data
                 if ($this->userRepository->storeProfileVisitors($storeData)) {
                     //user full name
-                    $userFullName = $user->first_name . ' ' . $user->last_name;
+                    $userFullName = $user->first_name;
+                    //. ' ' . $user->last_name;
 
                     //activity log message
                     activityLog($userFullName . ' ' . 'profile visited.');
@@ -939,7 +940,8 @@ class UserEngine extends BaseEngine
         $this->userEncounterRepository->deleteOldEncounterUser();
 
         //user full name
-        $userFullName = $user->first_name . ' ' . $user->last_name;
+        $userFullName = $user->first_name;
+        //. ' ' . $user->last_name;
         //loggedIn user name
         $loggedInUserFullName = Auth::user()->first_name . ' ' . Auth::user()->last_name;
         $loggedInUserName = Auth::user()->username;

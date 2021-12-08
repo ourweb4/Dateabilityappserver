@@ -87,13 +87,13 @@
   margin-top: 24px;
 }
 .lw-login-register-page .lw-update-wizard.sw-theme-dots > ul.step-anchor > li.active > a {
-  color: #d2019b;
+  color:#2646d1;
   background: transparent;
 }
 .lw-login-register-page .lw-update-wizard.sw-theme-dots > ul.step-anchor > li.active > a:before {
-  color: #d2019a;
+  color:#2646d1;
 }
 .lw-login-register-page .lw-update-wizard.sw-theme-dots > ul.step-anchor > li.active > a:after {
-  background: #d2019a;
+  background:#2646d1;
 }
 /*# sourceMappingURL=../source-maps/login-register.src.css.map */

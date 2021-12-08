@@ -148,7 +148,8 @@ class FilterEngine extends BaseEngine implements FilterEngineInterface
                 $filterData[] = [
                     'id'            => $filter->user_id,
                     'username'      => $filter->username,
-                    'fullName'      => $filter->first_name . ' ' . $filter->last_name,
+                    'fullName'      => $filter->first_name,
+                // . ' ' . $filter->last_name,
                     'profileImage'  => $profilePictureUrl,
                     'gender'        => $gender,
                     'dob'           => $filter->dob,
@@ -311,7 +312,8 @@ class FilterEngine extends BaseEngine implements FilterEngineInterface
                 $filterData[] = [
                     'id'            => $filter->user_id,
                     'username'      => $filter->username,
-                    'fullName'      => $filter->first_name . ' ' . $filter->last_name,
+                    'fullName'      => $filter->first_name,
+                        //. ' ' . $filter->last_name,
                     'profileImage'  => $profilePictureUrl,
                     'gender'         => $gender,
                     'dob'             => $filter->dob,
@@ -530,7 +532,8 @@ class FilterEngine extends BaseEngine implements FilterEngineInterface
                 $filterData[] = [
                     'id'            => $filter['user_id'],
                     'username'      => $filter['username'],
-                    'fullName'      => $filter['first_name'] . ' ' . $filter['last_name'],
+                    'fullName'      => $filter['first_name'],
+                    //. ' ' . $filter['last_name'],
                     'profileImage'  => $profilePictureUrl,
                     'gender'         => $gender,
                     'dob'             => $filter['dob'],

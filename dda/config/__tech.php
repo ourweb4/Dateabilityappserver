@@ -253,7 +253,8 @@ $techAppConfig = [
         'gender' => [
             1 => __tr('Male'),
             2 => __tr('Female'),
-            3 => __tr('Secret')
+            3 => __tr('Non-binary'),
+            4 => __tr('Other')
         ],
         'default_min_age' => 18,
         'default_max_age' => 50,

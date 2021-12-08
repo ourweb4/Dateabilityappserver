@@ -359,7 +359,7 @@ class UserRepository extends BaseRepository implements UserRepositoryBlueprint
                         '_uid as userUId',
                         'username',
                         'status',
-                        DB::raw('CONCAT(users.first_name, " ", users.last_name) AS userFullName')
+                        DB::raw('CONCAT(users.first_name, " ") AS userFullName')
                     ],
                     'user_profiles' => [
                         '_id as userProfileId',
@@ -406,7 +406,8 @@ class UserRepository extends BaseRepository implements UserRepositoryBlueprint
                         '_uid as userUId',
                         'username',
                         'status',
-                        DB::raw('CONCAT(users.first_name, " ", users.last_name) AS userFullName')
+        //                'first_name',
+                        DB::raw('CONCAT(users.first_name, " ") AS userFullName')
                     ],
                     'user_profiles' => [
                         '_id as userProfileId',
@@ -454,7 +455,7 @@ class UserRepository extends BaseRepository implements UserRepositoryBlueprint
                         '_uid as userUId',
                         'username',
                         'status',
-                        DB::raw('CONCAT(users.first_name, " ", users.last_name) AS userFullName')
+                        DB::raw('CONCAT(users.first_name, " ") AS userFullName')
                     ],
                     'user_profiles' => [
                         '_id as userProfileId',
@@ -571,7 +572,7 @@ class UserRepository extends BaseRepository implements UserRepositoryBlueprint
                         '_uid as userUId',
                         'username',
                         'status',
-                        DB::raw('CONCAT(users.first_name, " ", users.last_name) AS userFullName')
+                        DB::raw('CONCAT(users.first_name, " ") AS userFullName')
                     ],
                     'user_profiles' => [
                         '_id as userProfileId',

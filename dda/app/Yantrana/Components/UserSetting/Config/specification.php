@@ -19,7 +19,7 @@ return [
                         'other'             => __tr('Other'),
                     ]
                 ],
-                'body_type' => [
+        /*        'body_type' => [
                     'name'          => __tr('Body Type'),
                     'input_type'    => 'select',
                     'options' => [
@@ -31,7 +31,7 @@ return [
                         'average'       => __tr('Average'),
                         'other'         => __tr('Other')
                     ]
-                ],
+                ],*/
                 'height' => [
                     'name' => __tr('Height'),
                     'input_type'    => 'select',
@@ -236,7 +236,7 @@ return [
                         'other'         => __tr('Other')
                     ]
                 ],
-                'i_live_with' => [
+/*                'i_live_with' => [
                     'name'          => __tr('I live with'),
                     'input_type'    => 'select',
                     'options' => [
@@ -247,15 +247,15 @@ return [
                         'children'  => __tr('Children'),
                         'other'     => __tr('Other')
                     ]
-                ],
-                'car' => [
+                ],*/
+/*                'car' => [
                     'name'          => __tr('Car'),
                     'input_type'    => 'select',
                     'options' => [
                         'none' => __tr('None'),
                         'my_own_car' => __tr('My Own Car')
                     ]
-                ],
+                ],*/
                 'travel' => [
                     'name'          => __tr('Travel'),
                     'input_type'    => 'select',

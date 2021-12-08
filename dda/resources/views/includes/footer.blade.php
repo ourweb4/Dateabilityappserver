@@ -6,7 +6,10 @@
                         '__storeName__' => getStoreSettings('name'),
                         '__copyrightYear__' => date('Y')
                     ]) ?> </span>
-            <a href="<?= route('user.read.contact') ?>" class="pl-1"><?= __tr('Contact') ?></a>
+            <a href="<?= route('user.read.contact') ?>" class="pl-1"><?= __tr('Contact') ?></a><br>
+            <span><?= __tr('This website was made by ') ?>
+            <a href="http://ourweb.net">Ourweb.net</a>
+            </span>
         </div>
     </div>
 </footer>

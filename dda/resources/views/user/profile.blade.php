@@ -61,9 +61,9 @@
 			</span>
 			@endif
 			<h4>
-				<?= $userData['fullName'] ?>
+				<?= $userData['first_name'] ?>
 				@if(!__isEmpty($userData['userAge'])) (<span data-model="userData.userAge"><?= __tr($userData['userAge']) ?></span>) @endif
-				<!-- show user online, idle or offline status -->
+			`	<!-- show user online, idle or offline status -->
 				@if(!$isOwnProfile)
 				@if($userOnlineStatus == 1)
 				<span class="lw-dot lw-dot-success float-none" title="<?= __tr("Online") ?>"></span>
@@ -92,22 +92,22 @@
 			<span class="mr-3"><span data-model="profileData.city"><?= $userProfileData['city'] ?></span>, <span data-model="profileData.country_name"><?= $userProfileData['country_name'] ?></span></span>
 			@endif
 
-			@if($isOwnProfile)
-			<div class="float-right">
-				<!-- total user likes count -->
-				<i class="fas fa-heart text-danger"></i> <span id="lwTotalUserLikes" class="mr-3">
-					<?= __trn('__totalUserLike__ like', '__totalUserLike__ likes', $totalUserLike, [
-						'__totalUserLike__' => $totalUserLike
-					]) ?></span>
-				<!-- /total user likes count -->
+{{--			@if($isOwnProfile)--}}
+{{--			<div class="float-right">--}}
+{{--				<!-- total user likes count -->--}}
+{{--				<i class="fas fa-heart text-danger"></i> <span id="lwTotalUserLikes" class="mr-3">--}}
+{{--					<?= __trn('__totalUserLike__ like', '__totalUserLike__ likes', $totalUserLike, [--}}
+{{--						'__totalUserLike__' => $totalUserLike--}}
+{{--					]) ?></span>--}}
+{{--				<!-- /total user likes count -->--}}
 
-				<!-- total user visitors count -->
-				<i class="fas fa-eye text-warning"></i> <?= __trn('__totalVisitors__ view', '__totalVisitors__ views', $totalVisitors, [
-															'__totalVisitors__' => $totalVisitors
-														]) ?>
-				<!-- /total user visitors count -->
-			</div>
-			@endif
+{{--				<!-- total user visitors count -->--}}
+{{--				<i class="fas fa-eye text-warning"></i> <?= __trn('__totalVisitors__ view', '__totalVisitors__ views', $totalVisitors, [--}}
+{{--															'__totalVisitors__' => $totalVisitors--}}
+{{--														]) ?>--}}
+{{--				<!-- /total user visitors count -->--}}
+{{--			</div>--}}
+{{--			@endif--}}
 		</div>
 	</div>
 	<!-- User Profile and Cover photo -->
@@ -124,8 +124,7 @@
 			</span>
 			@endif
 			<div class="row" id="lwProfileAndCoverStaticBlock">
-				<div class="col-lg-12">
-					<div class="card mb-3 lw-profile-image-card-container">
+				<div class="col-lg-12"><div class="card mb-3 lw-profile-image-card-container">
 						<img class="lw-profile-thumbnail lw-photoswipe-gallery-img lw-lazy-img" id="lwProfilePictureStaticImage" data-src="<?= imageOrNoImageAvailable($userData['profilePicture']) ?>">
 						<img class="lw-cover-picture card-img-top lw-lazy-img" id="lwCoverPhotoStaticImage" data-src="<?= imageOrNoImageAvailable($userData['coverPicture']) ?>">
 					</div>
@@ -399,6 +398,7 @@
 					</div>
 					<!-- /Birthday -->
 				</div>
+{{--
 				@if(array_get($userProfileData, 'showMobileNumber'))
 				<div class="form-group row">
 					<!-- Mobile Number -->
@@ -411,6 +411,7 @@
 					<!-- /Mobile Number -->
 				</div>
 				@endif
+--}}
 			</div>
 			<!-- /Static basic information container -->
 
@@ -424,7 +425,7 @@
 						<input type="text" value="<?= $userData['first_name'] ?>" class="form-control" name="first_name" placeholder="<?= __tr('First Name') ?>">
 					</div>
 					<!-- /First Name -->
-					<!-- Last Name -->
+                   <!-- Last Name -->
 					<div class="col-sm-6">
 						<label for="last_name"><?= __tr('Last Name') ?></label>
 						<input type="text" value="<?= $userData['last_name'] ?>" class="form-control" name="last_name" placeholder="<?= __tr('Last Name') ?>">
@@ -766,7 +767,7 @@
 		<!-- profile related -->
 		<div class="card">
 			<div class="card-header">
-				<?= $userData['fullName'] ?>
+				<?= $userData['first_name'] ?>
 			</div>
 			<div class="card-body">
 				<img class="lw-profile-thumbnail lw-lazy-img" data-src="<?= imageOrNoImageAvailable($userData['profilePicture']) ?>">

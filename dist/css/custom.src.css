@@ -204,7 +204,7 @@ body.lw-colorbox-opened #wrapper {
 }
 
 label.lw-validation-error {
-  color: #cb0097;
+  color: #2646d1;
   font-size: 0.85rem;
   position: relative;
   line-height: 1;
@@ -394,7 +394,7 @@ form.user .form-control-user {
   color: #9496a5;
 }
 .list-group-item.list-group-item-action.active {
-  background-color: #d2009c;
+  background-color: #2646d1;
   color: white;
 }
 
@@ -436,7 +436,7 @@ form.user .form-control-user {
 }
 .sidebar-dark .nav-item.active .nav-link i,
 .sidebar-dark .nav-item.active .nav-link {
-  color: #d2179c;
+  color: #2646d1;
 }
 .sidebar-dark .nav-item .nav-link .badge {
   right: 30px;
@@ -578,13 +578,13 @@ form.user .form-control-user {
 input:invalid:required,
 select:invalid:required,
 textarea:invalid:required {
-  border-right: #d2179c 3px solid;
+  border-right: #2646d1 3px solid;
 }
 .custom-checkbox input:invalid:required ~ .custom-control-label:after,
 .custom-checkbox select:invalid:required ~ .custom-control-label:after,
 .custom-checkbox textarea:invalid:required ~ .custom-control-label:after {
   content: " *";
-  color: #d2179c;
+  color: #2646d1;
   left: unset;
   right: -18px;
   top: 2px;
@@ -660,7 +660,7 @@ textarea:invalid:required {
   padding: 6px;
 }
 .lw-group-radio-option-img.active {
-  border: 2px solid #d2009c;
+  border: 2px solid #2646d1;
   -moz-transform: scale(1.05);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
@@ -678,7 +678,7 @@ textarea:invalid:required {
   border-radius: 2px;
 }
 .lw-group-radio-option-img.active .lw-credit-package-name {
-  background-color: #d2009c;
+  background-color: #2646d1;
   color: white;
 }
 .lw-group-radio-option-img small {
@@ -1026,7 +1026,7 @@ img.lw-user-gift-img {
 }
 
 .lw-user-chat-list:hover {
-  background: #cb0097;
+  background: #2646d1;
   cursor: pointer;
 }
 .lw-user-chat-list:hover p,
@@ -1726,7 +1726,7 @@ footer.sticky-footer {
   position: absolute;
   background: none;
   border-radius: 50%;
-  border: 2px dotted #d2179c;
+  border: 2px dotted #2646d1;
   animation-name: lw-phone-waves;
   animation-iteration-count: infinite;
   animation-direction: normal;

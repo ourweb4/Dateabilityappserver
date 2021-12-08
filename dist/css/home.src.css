@@ -10,8 +10,8 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #d2009c;
-  border: 1px solid #d2009c;
+  color: #2646d1;
+  border: 1px solid #2646d1;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
@@ -66,15 +66,15 @@ body {
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #d2009c;
+    color: #2646d1;
   }
   #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #d2009c;
+    color: #2646d1;
     outline: none;
-    border-bottom: 0.25rem solid #d2009c;
+    border-bottom: 0.25rem solid #2646d1;
   }
 }
 .masthead {
@@ -136,7 +136,7 @@ body {
 
 /* 
 .btn-primary {
-  background-color: #d2009c;
+  background-color: #2646d1;
 }
 
 .btn-primary:hover {
@@ -173,7 +173,7 @@ body {
 @media (min-width: 992px) {
   .features-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #d2009c;
+    border-left: 0.5rem solid #2646d1;
   }
 }
 @media (min-width: 992px) {
@@ -181,7 +181,7 @@ body {
     padding: 5rem;
   }
   .features-section .feature-text hr {
-    border-color: #d2009c;
+    border-color: #2646d1;
     border-width: 0.25rem;
     width: 30%;
   }
@@ -227,7 +227,7 @@ body {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #d2009c;
+  border-bottom: 0.25rem solid #2646d1;
 }
 .contact-section .card h4 {
   font-size: 0.8rem;
@@ -236,7 +236,7 @@ body {
   letter-spacing: 0.15rem;
 }
 .contact-section .card hr {
-  border-color: #d2009c;
+  border-color: #2646d1;
   border-width: 0.25rem;
   width: 3rem;
 }
