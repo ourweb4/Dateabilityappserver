@@ -65,7 +65,8 @@ class UserEncounterRepository extends BaseRepository
                             '_uid',
                             'status',
                             'username',
-                            DB::raw('CONCAT(users.first_name, " ", users.last_name) AS userFullName')
+                            'first_name',
+                            DB::raw('CONCAT(users.first_name, " ") AS userFullName')
                         ],
                         'user_profiles' => [
                             '_id as profileId',

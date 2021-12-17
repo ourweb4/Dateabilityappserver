@@ -64,7 +64,8 @@ class UserController extends BaseController
         if ($processReaction['reaction_code'] === 1) {
             return $this->responseAction(
                 $this->processResponse($processReaction, [], [], true),
-                $this->redirectTo('user.profile_view', ['username' => getUserAuthInfo('profile.username')])
+                $this->redirectTo('home_page', ['username' => getUserAuthInfo('profile.username')])
+//               $this->redirectTo('user.profile_view', ['username' => getUserAuthInfo('profile.username')])
             );
         } else {
             return $this->responseAction(

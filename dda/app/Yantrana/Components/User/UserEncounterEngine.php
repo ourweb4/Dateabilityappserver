@@ -129,7 +129,7 @@ class UserEncounterEngine extends BaseEngine
                 '_id'             => $randomUser->_id,
                 '_uid'            => $randomUser->_uid,
                 'username'         => $randomUser->username,
-                'userFullName'     => $randomUser->userFullName,
+                'userFullName'     => $randomUser->first_name,
                 'stats'         => $randomUser->status,
                 'userImageUrl'     => $userImageUrl,
                 'userCoverUrl'     => $userCoverUrl,

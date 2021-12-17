@@ -25,7 +25,8 @@
 	<!-- user name -->
 	<div class="lw-user-text">
 		<a class="btn btn-link lw-user-text-link" href="<?= route('user.profile_view', ['username' => $randomUserData['username']]) ?>">
-			<?= $randomUserData['userFullName'] ?>@if(isset($randomUserData['userAge'])),@endif
+
+			<?= $randomUserData['first_Name'] ?>@if(isset($randomUserData['userAge'])),@endif
 		</a>
 		<span class="lw-user-text-meta">
 			@if($randomUserData['userAge'])

@@ -4,6 +4,7 @@
     <button type="button" id="sidebarToggleTop" class="btn btn-link d-block d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>
+
     <ul class="navbar-nav ml-0">
         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
         <li class="nav-item dropdown no-arrow">
@@ -74,7 +75,7 @@
     <!-- Topbar Navbar -->
 
     <ul class="navbar-nav">
-        <li class="nav-item d-none d-sm-none d-md-block">
+       {{-- <li class="nav-item d-none d-sm-none d-md-block">
             <a class="nav-link" onclick="getChatMessenger('<?= route('user.read.all_conversation') ?>', true)" id="lwAllMessageChatButton" data-chat-loaded="false" data-toggle="modal" data-target="#messengerDialog">
                 <span class="badge badge-danger badge-counter lw-new-message-badge"></span>
                 <i class="far fa-comments"></i>
@@ -116,24 +117,24 @@
 				</script>
                 <!-- /Notification block -->
             </div>
-        </li>
+        </li>--}}
         <!-- /Notification Link -->
 
         <!-- Nav Item - Messages -->
-        <li class="nav-item d-none d-sm-none d-md-block">
-            <a class="nav-link" href="<?= route('user.credit_wallet.read.view') ?>">
-                <i class="fas fa-coins fa-fw mr-2"></i>
-                <span class="badge badge-success badge-counter" id="lwTotalCreditWalletAmt"><?= totalUserCredits() ?></span>
-            </a>
-        </li>
-
-        <!-- Nav Item - Messages -->
-        <li class="nav-item d-none d-sm-none d-md-block">
+ {{--       <li class="nav-item d-none d-sm-none d-md-block">
             <a class="nav-link lw-ajax-link-action" method="get" data-callback="updateBoosterPrice" href="<?= route('user.read.booster_data') ?>" data-toggle="modal" data-target="#boosterModal">
                 <i class="fas fa-bolt fa-fw mr-2"></i> <span id="lwBoosterTimerCountDown"></span>
             </a>
         </li>
 
+        <!-- Nav Item - Messages -->
+           <li class="nav-item d-none d-sm-none d-md-block">
+               <a class="nav-link" href="<?= route('user.credit_wallet.read.view') ?>">
+                   <i class="fas fa-coins fa-fw mr-2"></i>
+                   <span class="badge badge-success badge-counter" id="lwTotalCreditWalletAmt"><?= totalUserCredits() ?></span>
+               </a>
+           </li>
+--}}
         <?php $translationLanguages = getActiveTranslationLanguages(); ?>
 
         <!-- Language Menu -->

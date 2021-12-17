@@ -63,7 +63,7 @@
 			<h4>
 				<?= $userData['first_name'] ?>
 				@if(!__isEmpty($userData['userAge'])) (<span data-model="userData.userAge"><?= __tr($userData['userAge']) ?></span>) @endif
-			`	<!-- show user online, idle or offline status -->
+				<!-- show user online, idle or offline status -->
 				@if(!$isOwnProfile)
 				@if($userOnlineStatus == 1)
 				<span class="lw-dot lw-dot-success float-none" title="<?= __tr("Online") ?>"></span>
@@ -123,6 +123,7 @@
 				</a>
 			</span>
 			@endif
+{{--
 			<div class="row" id="lwProfileAndCoverStaticBlock">
 				<div class="col-lg-12"><div class="card mb-3 lw-profile-image-card-container">
 						<img class="lw-profile-thumbnail lw-photoswipe-gallery-img lw-lazy-img" id="lwProfilePictureStaticImage" data-src="<?= imageOrNoImageAvailable($userData['profilePicture']) ?>">
@@ -130,6 +131,7 @@
 					</div>
 				</div>
 			</div>
+--}}
 			@if($isOwnProfile)
 			<div class="row" id="lwProfileAndCoverEditBlock" style="display: none;">
 				<div class="col-lg-3">
@@ -337,11 +339,14 @@
 					</div>
 					<!-- /First Name -->
 					<!-- Last Name -->
+					@if($isOwnProfile)
+
 					<div class="col-sm-6">
 						<label for="last_name"><strong><?= __tr('Last Name') ?></strong></label>
 						<div class="lw-inline-edit-text" data-model="userData.last_name"><?= __ifIsset($userData['last_name'], $userData['last_name'], '-') ?></div>
 					</div>
-					<!-- /Last Name -->
+				@endif
+				<!-- /Last Name -->
 				</div>
 				@endif
 				<div class="form-group row">
@@ -354,23 +359,29 @@
 					</div>
 					<!-- /Gender -->
 					<!-- Preferred Language -->
+					@if($isOwnProfile)
+
 					<div class="col-sm-6">
 						<label><strong><?= __tr('Preferred Language') ?></strong></label>
 						<div class="lw-inline-edit-text" data-model="profileData.formatted_preferred_language">
 							<?= __ifIsset($userProfileData['formatted_preferred_language'], $userProfileData['formatted_preferred_language'], '-') ?>
 						</div>
 					</div>
+				@endif
 					<!-- /Preferred Language -->
 				</div>
 				<div class="form-group row">
 					<!-- Relationship Status -->
+					@if($isOwnProfile)
+
 					<div class="col-sm-6 mb-3 mb-sm-0">
 						<label><strong><?= __tr('Relationship Status') ?></strong></label>
 						<div class="lw-inline-edit-text" data-model="profileData.formatted_relationship_status">
 							<?= __ifIsset($userProfileData['formatted_relationship_status'], $userProfileData['formatted_relationship_status'], '-') ?>
 						</div>
 					</div>
-					<!-- /Relationship Status -->
+				@endif
+				<!-- /Relationship Status -->
 					<!-- Work Status -->
 					<div class="col-sm-6">
 						<label for="work_status"><strong><?= __tr('Work Status') ?></strong></label>
@@ -389,6 +400,7 @@
 						</div>
 					</div>
 					<!-- /Education -->
+				@if($isOwnProfile)
 					<!-- Birthday -->
 					<div class="col-sm-6">
 						<label for="birthday"><strong><?= __tr('Birthday') ?></strong></label>
@@ -397,6 +409,8 @@
 						</div>
 					</div>
 					<!-- /Birthday -->
+
+				@endif
 				</div>
 {{--
 				@if(array_get($userProfileData, 'showMobileNumber'))
@@ -426,10 +440,13 @@
 					</div>
 					<!-- /First Name -->
                    <!-- Last Name -->
+					@if($isOwnProfile)
+
 					<div class="col-sm-6">
 						<label for="last_name"><?= __tr('Last Name') ?></label>
 						<input type="text" value="<?= $userData['last_name'] ?>" class="form-control" name="last_name" placeholder="<?= __tr('Last Name') ?>">
 					</div>
+					@endif
 					<!-- /Last Name -->
 				</div>
 				<div class="form-group row">
@@ -446,6 +463,8 @@
 
 					<!-- /Gender -->
 					<!-- Birthday -->
+					@if($isOwnProfile)
+
 					<div class="col-sm-6">
 						<label for="select_preferred_language"><?= __tr('Preferred Language') ?></label>
 						<select name="preferred_language" class="form-control" id="select_preferred_language">
@@ -459,7 +478,7 @@
 				</div>
 				<div class="form-group row">
 					<!-- Relationship Status -->
-					<div class="col-sm-6 mb-3 mb-sm-0">
+ 					<div class="col-sm-6 mb-3 mb-sm-0">
 						<label for="select_relationship_status"><?= __tr('Relationship Status') ?></label>
 						<select name="relationship_status" class="form-control" id="select_relationship_status">
 							<option value="" selected disabled><?= __tr('Choose your Relationship Status') ?></option>
@@ -479,6 +498,7 @@
 							@endforeach
 						</select>
 					</div>
+				@endif
 					<!-- /Work status -->
 				</div>
 				<div class="form-group row">
@@ -523,66 +543,6 @@
 		</div>
 	</div>
 	<!-- /User Basic Information -->
-	<div class="card mb-3">
-		<div class="card-header">
-			@if($isOwnProfile)
-			<span class="float-right">
-				<a class="lw-icon-btn" href role="button" id="lwEditUserLocation">
-					<i class="fa fa-pencil-alt"></i>
-				</a>
-				<a class="lw-icon-btn" href role="button" id="lwCloseLocationBlock" style="display: none;">
-					<i class="fa fa-times"></i>
-				</a>
-			</span>
-			@endif
-			<h5><i class="fas fa-map-marker-alt"></i> <?= __tr('Location') ?></h5>
-		</div>
-		<div class="card-body">
-			@if(getStoreSettings('allow_google_map') or getStoreSettings('use_static_city_data'))
-			<div id="lwUserStaticLocation">
-			@if(getStoreSettings('allow_google_map'))
-				<div class="gmap_canvas"><iframe height="300" id="gmap_canvas" src="https://maps.google.com/maps/place?q=<?= $latitude ?>,<?= $longitude ?>&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-				</div>
-			@else
-			<div id="staticMapId"></div>
-			@endif
-			</div>
-			<div id="lwUserEditableLocation" style="display: none;">
-			@if(getStoreSettings('use_static_city_data'))
-				<div class="form-group">
-					<label for="selectLocationCity"><?= __tr('Location') ?></label>
-					<input type="text" id="selectLocationCity" class="form-control" placeholder="<?= __tr('Enter a location') ?>">
-				</div>
-				@else
-				<div class="form-group">
-					<label for="address_address"><?= __tr('Location') ?></label>
-					<input type="text" id="address-input" name="address_address" class="form-control map-input" placeholder="<?= __tr('Enter a location') ?>">
-
-					<!-- show select location on map error -->
-					<div class="alert alert-danger mt-2 alert-dismissible" style="display: none" id="lwShowLocationErrorMessage">
-						<button type="button" class="close" data-dismiss="alert">&times;</button>
-						<span data-model="locationErrorMessage"></span>
-					</div>
-					<!-- /show select location on map error -->
-
-					<input type="hidden" name="address_latitude" data-model="profileData.latitude" id="address-latitude" value="<?= $latitude ?>" />
-					<input type="hidden" name="address_longitude" data-model="profileData.longitude" id="address-longitude" value="<?= $longitude ?>" />
-				</div>
-				<div id="address-map-container" style="width:100%;height:400px; ">
-					<div style="width: 100%; height: 100%" id="address-map"></div>
-				</div>
-			</div>
-			@endif
-			@else
-			<!-- info message -->
-			<div class="alert alert-info">
-				<?= __tr('Something went wrong with Google Api Key, please contact to system administrator.') ?>
-			</div>
-			<!-- / info message -->
-			@endif
-		</div>
-	</div>
-
 	<!-- User Specifications -->
 	@if(!__isEmpty($userSpecificationData))
 	@foreach($userSpecificationData as $specificationKey => $specifications)
@@ -656,6 +616,66 @@
 	@endforeach
 	@endif
 	<!-- /User Specifications -->
+	<div class="card mb-3">
+		<div class="card-header">
+			@if($isOwnProfile)
+				<span class="float-right">
+				<a class="lw-icon-btn" href role="button" id="lwEditUserLocation">
+					<i class="fa fa-pencil-alt"></i>
+				</a>
+				<a class="lw-icon-btn" href role="button" id="lwCloseLocationBlock" style="display: none;">
+					<i class="fa fa-times"></i>
+				</a>
+			</span>
+			@endif
+			<h5><i class="fas fa-map-marker-alt"></i> <?= __tr('Location') ?></h5>
+		</div>
+		<div class="card-body">
+			@if(getStoreSettings('allow_google_map') or getStoreSettings('use_static_city_data'))
+				<div id="lwUserStaticLocation">
+					@if(getStoreSettings('allow_google_map'))
+						<div class="gmap_canvas"><iframe height="300" id="gmap_canvas" src="https://maps.google.com/maps/place?q=<?= $latitude ?>,<?= $longitude ?>&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+						</div>
+					@else
+						<div id="staticMapId"></div>
+					@endif
+				</div>
+				<div id="lwUserEditableLocation" style="display: none;">
+					@if(getStoreSettings('use_static_city_data'))
+						<div class="form-group">
+							<label for="selectLocationCity"><?= __tr('Location') ?></label>
+							<input type="text" id="selectLocationCity" class="form-control" placeholder="<?= __tr('Enter a location') ?>">
+						</div>
+					@else
+						<div class="form-group">
+							<label for="address_address"><?= __tr('Location') ?></label>
+							<input type="text" id="address-input" name="address_address" class="form-control map-input" placeholder="<?= __tr('Enter a location') ?>">
+
+							<!-- show select location on map error -->
+							<div class="alert alert-danger mt-2 alert-dismissible" style="display: none" id="lwShowLocationErrorMessage">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
+								<span data-model="locationErrorMessage"></span>
+							</div>
+							<!-- /show select location on map error -->
+
+							<input type="hidden" name="address_latitude" data-model="profileData.latitude" id="address-latitude" value="<?= $latitude ?>" />
+							<input type="hidden" name="address_longitude" data-model="profileData.longitude" id="address-longitude" value="<?= $longitude ?>" />
+						</div>
+						<div id="address-map-container" style="width:100%;height:400px; ">
+							<div style="width: 100%; height: 100%" id="address-map"></div>
+						</div>
+				</div>
+			@endif
+			@else
+			<!-- info message -->
+				<div class="alert alert-info">
+					<?= __tr('Something went wrong with Google Api Key, please contact to system administrator.') ?>
+				</div>
+				<!-- / info message -->
+			@endif
+		</div>
+	</div>
+
 
 
 	<!-- user report Modal-->
@@ -770,7 +790,7 @@
 				<?= $userData['first_name'] ?>
 			</div>
 			<div class="card-body">
-				<img class="lw-profile-thumbnail lw-lazy-img" data-src="<?= imageOrNoImageAvailable($userData['profilePicture']) ?>">
+{{--				<img class="lw-profile-thumbnail lw-lazy-img" data-src="<?= imageOrNoImageAvailable($userData['profilePicture']) ?>">--}}
 				@if($isPremiumUser)
 				<span class="lw-premium-badge" title="<?= __tr('Premium User') ?>"></span>
 				@endif

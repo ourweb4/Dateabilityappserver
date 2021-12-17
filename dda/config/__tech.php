@@ -291,6 +291,12 @@ $techAppConfig = [
             3 => __tr('Divorced'),
             4 => __tr('Widow')
         ],
+        'gender_pronouns' => [
+           1 => __tr('She'),
+           2 => __tr('He'),
+            3 => __tr('They'),
+            4 => __tr('Ze'),
+        ],
         'work_status' => [
             1 => __tr("Studying"),
             2 => __tr("Working"),
@@ -300,12 +306,13 @@ $techAppConfig = [
             6 => __tr("Other")
         ],
         'educations' => [
-            1 => __tr('Secondary school'),
-            2 => __tr('ITI'),
-            3 => __tr('College'),
-            4 => __tr('University'),
-            5 => __tr('Advanced degree'),
-            6 => __tr('Other')
+            1 => __tr('High school'),
+            2 => __tr('undergraduate'),
+            3 => __tr('College graduate'),
+            4 => __tr('Trade School'),
+            5 => __tr('Home School'),
+            6 => __tr('Boarding School'),
+            7  => __tr('Other')
         ]
     ],
 ];

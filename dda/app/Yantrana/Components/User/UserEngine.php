@@ -1295,7 +1295,7 @@ class UserEngine extends BaseEngine
 
                 //store gift data
                 if ($this->userRepository->storeUserGift($giftStoreData)) {
-                    $userFullName = $user->first_name . ' ' . $user->last_name;
+                    $userFullName = $user->first_name; // . ' ' . $user->last_name;
                     activityLog($userFullName . ' ' . 'send gift.');
                     //loggedIn user name
                     $loggedInUserName = Auth::user()->first_name . ' ' . Auth::user()->last_name;
@@ -1398,7 +1398,7 @@ class UserEngine extends BaseEngine
         //store block user data
         if ($this->userRepository->storeBlockUser($storeData)) {
             //user full name
-            $userFullName = $user->first_name . ' ' . $user->last_name;
+            $userFullName = $user->first_name; // . ' ' . $user->last_name;
             //loggedIn user name
             $loggedInUserName = Auth::user()->first_name . ' ' . Auth::user()->last_name;
             //activity log message
@@ -1489,7 +1489,7 @@ class UserEngine extends BaseEngine
         //delete block user
         if ($this->userRepository->deleteBlockUser($blockUserData)) {
             //user full name
-            $userFullName = $user->first_name . ' ' . $user->last_name;
+            $userFullName = $user->first_name;// . ' ' . $user->last_name;
             //loggedIn user name
             $loggedInUserName = Auth::user()->first_name . ' ' . Auth::user()->last_name;
             //activity log message

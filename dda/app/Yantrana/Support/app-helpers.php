@@ -153,7 +153,7 @@ if (!function_exists('getUserAuthInfo')) {
                     '_id'             => $user->_id,
                     '_uid'             => $user->_uid,
                     'username'        => !__isEmpty($user) ? $user->username : '',
-                    'full_name'     => !__isEmpty($user) ?  $user->first_name . ' ' . $user->last_name : '',
+                    'full_name'     => !__isEmpty($user) ?  $user->first_name : '',
                     'first_name'    => !__isEmpty($user) ? $user->first_name : '',
                     'last_name'        => !__isEmpty($user) ? $user->last_name : '',
                     'country'        => !__isEmpty($userProfile) ? $userProfile->countries__id : '',

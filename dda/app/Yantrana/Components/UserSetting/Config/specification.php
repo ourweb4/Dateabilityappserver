@@ -34,8 +34,8 @@ return [
                 ],*/
                 'height' => [
                     'name' => __tr('Height'),
-                    'input_type'    => 'select',
-                    'options' => [
+                    'input_type'    => 'textbox'
+            /*        'options' => [
                         "139"            => "139 cm",
                         "140"     => "140 cm (4' 7″)",
                         "141"            => "141 cm",
@@ -117,30 +117,34 @@ return [
                         "217"            => "217 cm",
                         "218"            => "218 cm",
                         "220"     => "220 cm (7' 3″)",
-                    ]
+                    ]*/
                 ],
-                'hair_color' => [
-                    'name'          => __tr('Hair Color'),
+                'Dateability_Deets' => [
+                    'name'          => __tr('Disability'),
                     'input_type'    => 'select',
                     'options'   => [
-                        'brown'                     => __tr('Brown'),
-                        'black'                     => __tr('Black'),
-                        'white'                     => __tr('White'),
-                        'sandy'                     => __tr('Sandy'),
-                        'gray_or_partially_gray'    => __tr('Gray or Partially Gray'),
-                        'red/auburn'                => __tr('Red/Auburn'),
-                        'blond/strawberry'          => __tr('Blond/Strawberry'),
-                        'blue'                      => __tr('Blue'),
-                        'green'                     => __tr('Green'),
-                        'orange'                    => __tr('Orange'),
-                        'pink'                      => __tr('Pink'),
-                        'purple'                    => __tr('Purple'),
-                        'partly_or_completely_bald' => __tr('Partly or Completely Bald'),
+                        'Ambulatory Wheelchair User' => __tr('Ambulatory Wheelchair User'),
+                        'Chronic Illness' => __tr('Chronic Illness'),
+                        'Emotional Support Animal'=> __tr('Emotional Support Animal'),
+                        'Service Animal' => __tr('Service Animal'),
+                        'Hearing Impairment' => __tr('Hearing Impairment'),
+                        'Immunocompromised' => __tr('Immunocompromised'),
+                        'Intellectual Disability' => __tr('Intellectual Disability'),
+                        'Limb Difference' => __tr('Limb Difference'),
+                        'Mobility Aid' => __tr('Mobility Aid'),
+                        'Neurological Disability' => __tr('Neurological Disability'),
+                        'Permanent Medical Device' => __tr('Permanent Medical Device'),
+                        'Physical Disability' => __tr('Physical Disability'),
+                        'Psychiatric Disability' => __tr('Psychiatric Disability'),
+                        'Sign Language' => __tr('Sign Language'),
+                        'Speech Impairment' => __tr('Speech Impairment'),
+                        'Visual Impairment' => __tr('Visual Impairment'),
                         'other'                     => __tr('Other')
                     ]
                 ]
             ]
         ],
+
         'personality' => [
             'title' => __tr('Personality'),
             'icon'  => '<i class="fas fa-child text-success"></i>',
@@ -195,6 +199,29 @@ return [
                         'only_good_friends' => __tr('Only good friends'),
                     ]
                 ],
+                'Interests' => [
+                    'name' => __tr('Interests'),
+                    'input_type' =>  'select',
+                    'options' => [
+                        'Animals' => __tr('Animals'),
+                        'Arts & Crafts' => __tr('Arts & Crafts'),
+                        'Board Games' => __tr('Board Games'),
+                        'Camping' => __tr('Camping'),
+                        'Concerts' => __tr('Concerts'),
+                        'Cooking & Baking' => __tr('Cooking & Baking'),
+                        'Musuems' => __tr('Museums'),
+                        'Music' => __tr('Music'),
+                        'Outdoor Recreations' => __tr('Outdoor Recreations'),
+                        'Photography' => __tr('Photography'),
+                        'Reading' => __tr('Reading'),
+                        'Writing' => __tr('Writing'),
+                        'Sports' => __tr('Sports'),
+                        'Traveling' => __tr('Traveling'),
+                        'Tv & Film' => __tr('Tv & Film'),
+                        'Video Games' => __tr('Video Games'),
+                    ]
+
+                ],
                 'children' => [
                     'name'          => __tr('Children'),
                     'input_type'    => 'select',
@@ -235,6 +262,25 @@ return [
                         'sikh'          => __tr('Sikh'),
                         'other'         => __tr('Other')
                     ]
+                ],
+                'Politics' => [
+                     'name' => __tr('Politics'),
+                    'input_type' => 'select',
+                    'options' => [
+                        'Liberal' => __tr('Liberal'),
+                        'Conservative' => __tr('Conservative'),
+                        'Apolitical' => __tr('Apolitical'),
+                        'Independent' => __tr('Independent'),
+                    ]
+                ],
+                'Vaccine_Status' => [
+                   'name' => __tr('Vaccine Status'),
+                   'input_type' => 'select',
+                   'options'  => [
+                       'Vaccinated' => __tr('Vaccinated'),
+                       'Not Vaccinated' => __tr('Not Vaccinated'),
+                       'Rather not say' => __tr('Rather not say')
+                   ]
                 ],
 /*                'i_live_with' => [
                     'name'          => __tr('I live with'),

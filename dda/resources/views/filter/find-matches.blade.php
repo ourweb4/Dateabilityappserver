@@ -21,7 +21,7 @@
 		<div class="card-title">
 			<h5>
 				<a class="text-secondary" href="<?= route('user.profile_view', ['username' => $filter['username']]) ?>">
-					<?= $filter['fullName'] ?>
+					<?= $filter['firstname'] ?>
 				</a>
 				<?= $filter['detailString'] ?> <br>
 				@if($filter['countryName'])
